@@ -23,6 +23,8 @@
 		23FF259B16D72AB200900166 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23FF257616D72AB200900166 /* Foundation.framework */; };
 		23FF25A316D72AB200900166 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 23FF25A116D72AB200900166 /* InfoPlist.strings */; };
 		23FF25A616D72AB200900166 /* ChipmunkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FF25A516D72AB200900166 /* ChipmunkTests.m */; };
+		23FF25B016D72E0F00900166 /* 002144.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23FF25AF16D72E0F00900166 /* 002144.jpg */; };
+		23FF25B216D72FA900900166 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 23FF25B116D72FA900900166 /* background.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		23FF25A216D72AB200900166 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		23FF25A416D72AB200900166 /* ChipmunkTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChipmunkTests.h; sourceTree = "<group>"; };
 		23FF25A516D72AB200900166 /* ChipmunkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChipmunkTests.m; sourceTree = "<group>"; };
+		23FF25AF16D72E0F00900166 /* 002144.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 002144.jpg; path = ../../../002144.jpg; sourceTree = "<group>"; };
+		23FF25B116D72FA900900166 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = ../../../background.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,8 @@
 		23FF257B16D72AB200900166 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				23FF25AF16D72E0F00900166 /* 002144.jpg */,
+				23FF25B116D72FA900900166 /* background.png */,
 				23FF257C16D72AB200900166 /* Chipmunk-Info.plist */,
 				23FF257D16D72AB200900166 /* InfoPlist.strings */,
 				23FF258016D72AB200900166 /* main.m */,
@@ -236,6 +242,8 @@
 				23FF258916D72AB200900166 /* Default@2x.png in Resources */,
 				23FF258B16D72AB200900166 /* Default-568h@2x.png in Resources */,
 				23FF258E16D72AB200900166 /* MainStoryboard.storyboard in Resources */,
+				23FF25B016D72E0F00900166 /* 002144.jpg in Resources */,
+				23FF25B216D72FA900900166 /* background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
