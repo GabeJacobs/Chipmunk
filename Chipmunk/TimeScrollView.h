@@ -25,4 +25,6 @@ enum TimeScrollDirection {
 
 @property (nonatomic,strong) id <TimeScrollViewDelegate> timeDelegate;
 
+- (void)setupTimeScroll;
+
 @end
