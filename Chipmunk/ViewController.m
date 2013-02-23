@@ -26,6 +26,19 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)didStopScrolling{
+    
+    
+    
+}
+
+- (void)didBeginScrolling:(int)direction{
+    
+}
+
+- (void)scrolledToHour:(int)hour Minute:(int)minute{
+    
+}
 
 @end
 

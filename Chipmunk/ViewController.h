@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TimeScrollView.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <TimeScrollViewDelegate>
 
 @end
