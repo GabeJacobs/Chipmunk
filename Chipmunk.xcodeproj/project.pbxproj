@@ -25,6 +25,7 @@
 		23FF25A316D72AB200900166 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 23FF25A116D72AB200900166 /* InfoPlist.strings */; };
 		23FF25A616D72AB200900166 /* ChipmunkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FF25A516D72AB200900166 /* ChipmunkTests.m */; };
 		23FF25B216D72FA900900166 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 23FF25B116D72FA900900166 /* background.png */; };
+		8E87EE2516D9846100C837F0 /* TimeScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E87EE2316D9846100C837F0 /* TimeScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		23FF25A416D72AB200900166 /* ChipmunkTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChipmunkTests.h; sourceTree = "<group>"; };
 		23FF25A516D72AB200900166 /* ChipmunkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChipmunkTests.m; sourceTree = "<group>"; };
 		23FF25B116D72FA900900166 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = ../../../background.png; sourceTree = "<group>"; };
+		8E87EE2316D9846100C837F0 /* TimeScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeScrollView.m; sourceTree = "<group>"; };
+		8E87EE2416D9846100C837F0 /* TimeScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeScrollView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +129,8 @@
 				23FF258C16D72AB200900166 /* MainStoryboard.storyboard */,
 				23FF258F16D72AB200900166 /* ViewController.h */,
 				23FF259016D72AB200900166 /* ViewController.m */,
+				8E87EE2416D9846100C837F0 /* TimeScrollView.h */,
+				8E87EE2316D9846100C837F0 /* TimeScrollView.m */,
 				23FF257B16D72AB200900166 /* Supporting Files */,
 			);
 			path = Chipmunk;
@@ -289,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23FF25A616D72AB200900166 /* ChipmunkTests.m in Sources */,
+				8E87EE2516D9846100C837F0 /* TimeScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
