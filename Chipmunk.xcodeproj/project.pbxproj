@@ -39,6 +39,11 @@
 		8E571C0116D9CA2800F946A3 /* ChipmunkUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E571C0016D9CA2800F946A3 /* ChipmunkUtils.m */; };
 		8E571C0316D9CBA300F946A3 /* sliderbarswag.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E571C0216D9CBA300F946A3 /* sliderbarswag.png */; };
 		8E571C0516D9CBAA00F946A3 /* ringcitybitch.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E571C0416D9CBAA00F946A3 /* ringcitybitch.png */; };
+		8E7BDE7E16DA15D000B67749 /* FSN_categories.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7BDE7916DA15D000B67749 /* FSN_categories.m */; };
+		8E7BDE7F16DA15D000B67749 /* FSNConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7BDE7B16DA15D000B67749 /* FSNConnection.m */; };
+		8E7BDE8016DA15D000B67749 /* FSNData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7BDE7D16DA15D000B67749 /* FSNData.m */; };
+		8E7BDE8416DA15F600B67749 /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7BDE8316DA15F600B67749 /* DatabaseManager.m */; };
+		8E7BDE8516DA160300B67749 /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7BDE8316DA15F600B67749 /* DatabaseManager.m */; };
 		8E87EE2516D9846100C837F0 /* TimeScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E87EE2316D9846100C837F0 /* TimeScrollView.m */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +96,14 @@
 		8E571C0016D9CA2800F946A3 /* ChipmunkUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChipmunkUtils.m; sourceTree = "<group>"; };
 		8E571C0216D9CBA300F946A3 /* sliderbarswag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sliderbarswag.png; sourceTree = "<group>"; };
 		8E571C0416D9CBAA00F946A3 /* ringcitybitch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ringcitybitch.png; sourceTree = "<group>"; };
+		8E7BDE7816DA15D000B67749 /* FSN_categories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSN_categories.h; sourceTree = "<group>"; };
+		8E7BDE7916DA15D000B67749 /* FSN_categories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSN_categories.m; sourceTree = "<group>"; };
+		8E7BDE7A16DA15D000B67749 /* FSNConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSNConnection.h; sourceTree = "<group>"; };
+		8E7BDE7B16DA15D000B67749 /* FSNConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSNConnection.m; sourceTree = "<group>"; };
+		8E7BDE7C16DA15D000B67749 /* FSNData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSNData.h; sourceTree = "<group>"; };
+		8E7BDE7D16DA15D000B67749 /* FSNData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSNData.m; sourceTree = "<group>"; };
+		8E7BDE8216DA15F600B67749 /* DatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseManager.h; sourceTree = "<group>"; };
+		8E7BDE8316DA15F600B67749 /* DatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseManager.m; sourceTree = "<group>"; };
 		8E87EE2316D9846100C837F0 /* TimeScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeScrollView.m; sourceTree = "<group>"; };
 		8E87EE2416D9846100C837F0 /* TimeScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeScrollView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -154,6 +167,7 @@
 		23FF257A16D72AB200900166 /* Chipmunk */ = {
 			isa = PBXGroup;
 			children = (
+				8E7BDE8116DA15E200B67749 /* 3rdPartyCode */,
 				23FF258316D72AB200900166 /* AppDelegate.h */,
 				23FF258416D72AB200900166 /* AppDelegate.m */,
 				23FF258C16D72AB200900166 /* MainStoryboard.storyboard */,
@@ -167,6 +181,8 @@
 				23286FB216D9FC5B005E16FA /* ActivityTableViewController.m */,
 				23BAE0E916DA013B00385268 /* ActivityCell.h */,
 				23BAE0EA16DA013B00385268 /* ActivityCell.m */,
+				8E7BDE8216DA15F600B67749 /* DatabaseManager.h */,
+				8E7BDE8316DA15F600B67749 /* DatabaseManager.m */,
 				23FF257B16D72AB200900166 /* Supporting Files */,
 			);
 			path = Chipmunk;
@@ -212,6 +228,27 @@
 				23FF25A116D72AB200900166 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8E7BDE7716DA15D000B67749 /* FSNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				8E7BDE7816DA15D000B67749 /* FSN_categories.h */,
+				8E7BDE7916DA15D000B67749 /* FSN_categories.m */,
+				8E7BDE7A16DA15D000B67749 /* FSNConnection.h */,
+				8E7BDE7B16DA15D000B67749 /* FSNConnection.m */,
+				8E7BDE7C16DA15D000B67749 /* FSNData.h */,
+				8E7BDE7D16DA15D000B67749 /* FSNData.m */,
+			);
+			path = FSNetworking;
+			sourceTree = "<group>";
+		};
+		8E7BDE8116DA15E200B67749 /* 3rdPartyCode */ = {
+			isa = PBXGroup;
+			children = (
+				8E7BDE7716DA15D000B67749 /* FSNetworking */,
+			);
+			name = 3rdPartyCode;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,6 +371,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E7BDE8516DA160300B67749 /* DatabaseManager.m in Sources */,
 				23286F9F16D9A483005E16FA /* TimeScrollView.m in Sources */,
 				23FF258116D72AB200900166 /* main.m in Sources */,
 				23FF258516D72AB200900166 /* AppDelegate.m in Sources */,
@@ -341,6 +379,9 @@
 				8E571C0116D9CA2800F946A3 /* ChipmunkUtils.m in Sources */,
 				23286FB316D9FC5B005E16FA /* ActivityTableViewController.m in Sources */,
 				23BAE0EB16DA013B00385268 /* ActivityCell.m in Sources */,
+				8E7BDE7E16DA15D000B67749 /* FSN_categories.m in Sources */,
+				8E7BDE7F16DA15D000B67749 /* FSNConnection.m in Sources */,
+				8E7BDE8016DA15D000B67749 /* FSNData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +392,7 @@
 				23FF25A616D72AB200900166 /* ChipmunkTests.m in Sources */,
 				8E87EE2516D9846100C837F0 /* TimeScrollView.m in Sources */,
 				23286FB416D9FC5B005E16FA /* ActivityTableViewController.m in Sources */,
+				8E7BDE8416DA15F600B67749 /* DatabaseManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
