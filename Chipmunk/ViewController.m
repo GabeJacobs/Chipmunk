@@ -48,7 +48,11 @@
 }
 
 - (void)didBeginScrolling:(int)direction{
+    CALayer *currentLayer = (CALayer *)[self.circleImage.layer presentationLayer];
+    self.currentAngle = [(NSNumber *)[currentLayer valueForKeyPath:@"transform.rotation"] floatValue];
     
+    CGAffineTransform rot = CGAffineTransformMakeRotation(self.currentAngle);
+    self.circleImage.transform = rot;
     if(direction == 1)
     {
         
