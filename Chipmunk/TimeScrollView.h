@@ -28,3 +28,4 @@ typedef enum TimeScrollDirection {
 - (void)setupTimeScroll;
 
 @end
+

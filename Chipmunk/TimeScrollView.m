@@ -23,6 +23,7 @@ const int MinutesInDay = 1440;
 @implementation TimeScrollView
 
 @synthesize currentDir = _currentDir;
+@synthesize isStopped = _isStopped;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -61,24 +62,20 @@ const int MinutesInDay = 1440;
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     self.isStopped = YES;
-    [self.timeDelegate didStopScrolling];
 }
 
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
-    NSLog(@"scroll animation stopped");
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
-    NSLog(@"did end dragging");
+    self.isStopped = !decelerate;
 }
 
-- (void)setCurrentDir:(TimeScrollDirection)currentDir {
-   
-    if(currentDir != _currentDir) {
-        NSLog(@"should begin scrolling: %i", currentDir);
-        //[self.timeDelegate didBeginScrolling:currentDir];
+- (void)setIsStopped:(BOOL)isStopped {
+    if(isStopped) {
+        [self.timeDelegate didStopScrolling];
     }
-    _currentDir = currentDir;
+    _isStopped = isStopped;
 }
 
 
