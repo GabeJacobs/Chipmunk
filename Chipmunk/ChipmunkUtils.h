@@ -11,5 +11,6 @@
 @interface ChipmunkUtils : NSObject
 
 + (UIColor*)chipmunkColor;
++ (UIColor*)tableColor;
 
 @end

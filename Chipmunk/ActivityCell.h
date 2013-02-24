@@ -13,5 +13,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *activityImage;
 @property (weak, nonatomic) IBOutlet UILabel *activityTime;
 @property (weak, nonatomic) IBOutlet UIImageView *activityTypeIcon;
+@property (weak, nonatomic) IBOutlet UIImageView *topBar;
 
 @end

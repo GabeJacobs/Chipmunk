@@ -7,6 +7,7 @@
 //
 
 #import "ActivityTableViewController.h"
+#import "ChipmunkUtils.h"
 #import "ActivityCell.h"
 
 @interface ActivityTableViewController ()
@@ -27,6 +28,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.table.backgroundColor = [ChipmunkUtils tableColor];
+    
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -58,6 +62,7 @@
         cell = [[ActivityCell alloc]  init];
         // if all cells have a common property set that here
     }
+    cell.backgroundColor = [ChipmunkUtils tableColor];
     // the information you need is in
     //self.dataSource[indexPath.row];
     

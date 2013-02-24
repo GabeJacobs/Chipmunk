@@ -98,46 +98,46 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="219" sectionHeaderHeight="22" sectionFooterHeight="22" id="wst-dx-TMj">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="270" sectionHeaderHeight="22" sectionFooterHeight="22" id="wst-dx-TMj">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="activityCell" selectionStyle="none" indentationWidth="10" reuseIdentifier="activityCell" rowHeight="219" id="XFk-Dk-Y2b" customClass="ActivityCell">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="219"/>
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="activityCell" selectionStyle="none" indentationWidth="10" reuseIdentifier="activityCell" rowHeight="270" id="XFk-Dk-Y2b" customClass="ActivityCell">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="270"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="218"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="269"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="toporangebar.png" id="RAV-Uj-iBM">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="center" image="toporangebar.png" id="RAV-Uj-iBM">
+                                                    <rect key="frame" x="0.0" y="25" width="320" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="leopard.jpeg" id="L0A-6U-YrU">
-                                                    <rect key="frame" x="0.0" y="43" width="320" height="148"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="center" image="leopard.jpeg" id="L0A-6U-YrU">
+                                                    <rect key="frame" x="0.0" y="62" width="320" height="148"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bottombarwhite.png" id="Ki9-bp-syj">
-                                                    <rect key="frame" x="0.0" y="182" width="320" height="36"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="center" image="bottombarwhite.png" id="Ki9-bp-syj">
+                                                    <rect key="frame" x="0.0" y="207" width="320" height="36"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mDU-kE-n89">
-                                                    <rect key="frame" x="7" y="189" width="42" height="21"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Watch this leopard video" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mDU-kE-n89">
+                                                    <rect key="frame" x="29" y="214" width="262" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="c6Y-Oq-8jd">
-                                                    <rect key="frame" x="46" y="8" width="42" height="21"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="11m" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="c6Y-Oq-8jd">
+                                                    <rect key="frame" x="70" y="34" width="46" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="19"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="videoicon.png" id="epg-eT-N5E">
-                                                    <rect key="frame" x="5" y="6" width="32" height="32"/>
+                                                    <rect key="frame" x="29" y="30" width="32" height="32"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
@@ -148,6 +148,7 @@
                                             <outlet property="activityName" destination="mDU-kE-n89" id="BS7-RS-HZe"/>
                                             <outlet property="activityTime" destination="c6Y-Oq-8jd" id="yOA-Zd-mLl"/>
                                             <outlet property="activityTypeIcon" destination="epg-eT-N5E" id="hAG-1J-iTk"/>
+                                            <outlet property="topBar" destination="RAV-Uj-iBM" id="4jg-Yf-BPU"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -170,10 +171,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bottombarwhite.png" width="320" height="32"/>
-        <image name="leopard.jpeg" width="320" height="148"/>
+        <image name="bottombarwhite.png" width="278" height="38"/>
+        <image name="leopard.jpeg" width="278" height="148"/>
         <image name="ringcitybitch.png" width="2119" height="2119"/>
-        <image name="toporangebar.png" width="320" height="38"/>
+        <image name="toporangebar.png" width="278" height="38"/>
         <image name="videoicon.png" width="64" height="64"/>
     </resources>
     <classes>
@@ -184,6 +185,7 @@
                 <relationship kind="outlet" name="activityName" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="activityTime" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="activityTypeIcon" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="topBar" candidateClass="UIImageView"/>
             </relationships>
         </class>
         <class className="ActivityTableViewController" superclassName="UIViewController">
