@@ -9,7 +9,11 @@
 #import "ViewController.h"
 #import <QuartzCore/QuartzCore.h>
 
+#define RADIANS_TO_DEGREES(__ANGLE__) ((__ANGLE__) / (float)M_PI * 180.0f)
+
 @interface ViewController ()
+
+@property float currentAngle;
 
 @end
 
@@ -32,8 +36,20 @@
 
 - (void)didStopScrolling{
     
-    [self.circleImage.layer removeAllAnimations];
+    CALayer *currentLayer = (CALayer *)[self.circleImage.layer presentationLayer];
+    self.currentAngle = [(NSNumber *)[currentLayer valueForKeyPath:@"transform.rotation"] floatValue];
+    NSLog(@"current angle: %f",self.currentAngle);
+  
+    
 
+    CGAffineTransform rot = CGAffineTransformMakeRotation(self.currentAngle);
+    self.circleImage.transform = rot;
+    self.circleImage.center = CGPointMake(165, 166);
+    
+    
+    
+    [self.circleImage.layer removeAllAnimations];
+    
     
 }
 
@@ -41,7 +57,9 @@
     
     if(direction == 1)
     {
+        
         CABasicAnimation *fullRotation = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
+        fullRotation.fillMode = kCAFillModeForwards;
         fullRotation.fromValue = [NSNumber numberWithFloat:0];
         fullRotation.toValue = [NSNumber numberWithFloat:((360*M_PI)/180)];
         fullRotation.duration = 1;
@@ -51,6 +69,7 @@
     }
     if(direction == 0){
         CABasicAnimation *fullRotation = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
+        fullRotation.fillMode = kCAFillModeForwards;
         fullRotation.fromValue = [NSNumber numberWithFloat:((360*M_PI)/180)];
         fullRotation.toValue = [NSNumber numberWithFloat:0];
         fullRotation.duration = 1;

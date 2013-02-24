@@ -12,10 +12,10 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Circle2.png" translatesAutoresizingMaskIntoConstraints="NO" id="Z7Z-FE-uyz">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Circle.png" translatesAutoresizingMaskIntoConstraints="NO" id="Z7Z-FE-uyz">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="279" id="VH0-1U-5sT"/>
-                                    <constraint firstAttribute="height" constant="281" id="hlq-82-ueV"/>
+                                    <constraint firstAttribute="height" constant="292" id="Axq-Jl-FCc"/>
+                                    <constraint firstAttribute="width" constant="290" id="l5X-kU-kzr"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X34-36-hWF">
@@ -75,14 +75,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="twv-vx-OEf" firstAttribute="centerX" secondItem="Z7Z-FE-uyz" secondAttribute="centerX" type="default" id="9v1-W9-Rw6"/>
+                            <constraint firstAttribute="trailing" secondItem="twv-vx-OEf" secondAttribute="trailing" constant="34" id="6Ea-zK-1fx"/>
                             <constraint firstItem="lxi-lZ-wnP" firstAttribute="centerX" secondItem="3XV-Pa-TFV" secondAttribute="centerX" type="default" id="9vl-9z-mVg"/>
                             <constraint firstAttribute="bottom" secondItem="jbn-Ma-QtD" secondAttribute="bottom" constant="124" id="AdN-oU-fOX"/>
                             <constraint firstItem="jbn-Ma-QtD" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="44" id="D8t-uO-4mY"/>
                             <constraint firstItem="X34-36-hWF" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="106" id="Dya-i7-Fod"/>
+                            <constraint firstItem="Z7Z-FE-uyz" firstAttribute="centerX" secondItem="UJI-UI-pol" secondAttribute="centerX" type="default" id="Ewj-wE-ziJ"/>
                             <constraint firstItem="UJI-UI-pol" firstAttribute="baseline" secondItem="lxi-lZ-wnP" secondAttribute="baseline" type="default" id="ShA-RB-fB5"/>
                             <constraint firstItem="twv-vx-OEf" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="32" id="TBW-0z-Ymw"/>
-                            <constraint firstItem="UJI-UI-pol" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="153" id="V00-qd-uQJ"/>
                             <constraint firstItem="Z7Z-FE-uyz" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="VAG-vg-YUc"/>
                             <constraint firstItem="UJI-UI-pol" firstAttribute="top" secondItem="lxi-lZ-wnP" secondAttribute="top" type="default" id="anQ-Ha-JyF"/>
                             <constraint firstItem="Z7Z-FE-uyz" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="d6j-OW-fD6"/>
@@ -135,7 +135,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Circle2.png" width="451" height="460"/>
+        <image name="Circle.png" width="300" height="300"/>
     </resources>
     <classes>
         <class className="NSLayoutConstraint" superclassName="NSObject">
