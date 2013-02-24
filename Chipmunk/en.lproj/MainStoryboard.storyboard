@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C2034" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Gl6-vG-AVp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Gl6-vG-AVp">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -71,7 +71,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="of7-bm-wUf" kind="push" id="pfO-Te-5R0"/>
+                                    <action selector="getActivitiesTable:" destination="2" eventType="touchUpInside" id="Vtz-He-Kpb"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="whitelogo.png" id="HTA-Jl-hrG">
@@ -96,7 +96,7 @@
         <!--Activity Table View Controller-->
         <scene sceneID="HNM-Wg-fVp">
             <objects>
-                <viewController id="of7-bm-wUf" customClass="ActivityTableViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="activityTable" id="of7-bm-wUf" customClass="ActivityTableViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QmQ-lU-vxW">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -171,6 +171,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="popView:" destination="of7-bm-wUf" eventType="touchUpInside" id="Cti-Dq-Y1e"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

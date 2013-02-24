@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "ChipmunkUtils.h"
+#import "ActivityTableViewController.h"
 #import <QuartzCore/QuartzCore.h>
 
 #define RADIANS_TO_DEGREES(__ANGLE__) ((__ANGLE__) / (float)M_PI * 180.0f)
@@ -92,12 +93,28 @@
   
 }
 
-- (void)scrolledToHour:(int)hour Minute:(int)minute{
-    
+- (void)scrolledToHour:(int)hour Minute:(int)minute
+{    
     self.hourLabel.text = [NSString stringWithFormat:@"%d",hour];
     self.minLabel.text = [NSString stringWithFormat:@"%d",minute];
-
+    
 }
+
+- (unsigned int)getTotalMinutes
+{
+    int hours = [self.hourLabel.text intValue];
+    int minutes = [self.minLabel.text intValue];
+    return (hours * 60) + minutes;
+}
+
+- (IBAction)getActivitiesTable:(id)sender
+{
+    ActivityTableViewController* atvc = [self.storyboard instantiateViewControllerWithIdentifier:@"activityTable"];
+    atvc.minutes = [self getTotalMinutes];
+    [self.navigationController pushViewController:atvc animated:YES];
+}
+
+
 
 
 

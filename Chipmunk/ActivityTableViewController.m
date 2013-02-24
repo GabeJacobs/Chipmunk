@@ -20,6 +20,7 @@
 @implementation ActivityTableViewController
 
 @synthesize dataSource = _dataSource;
+@synthesize minutes;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -38,7 +39,8 @@
     self.view.backgroundColor = [ChipmunkUtils tableColor];
 
     self.dbManager.delegate = self;
-    [self.dbManager getActivities:30 currentLocation:nil];
+    NSLog(@"minutes: %i", self.minutes);
+    [self.dbManager getActivities:self.minutes currentLocation:nil];
     
     
 
@@ -127,6 +129,10 @@
     return _dbManager;
 }
 
+- (IBAction)popView:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 
 @end
