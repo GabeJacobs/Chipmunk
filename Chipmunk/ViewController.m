@@ -23,10 +23,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.hourLabel setFont:[UIFont fontWithName:@"proximanovaregular" size:20.0]];
-    [self.minLabel setFont:[UIFont fontWithName:@"proximanovaregular" size:20.0]];
-    [self.mLabel setFont:[UIFont fontWithName:@"proximanovaregular" size:20.0]];
-    [self.hLabel setFont:[UIFont fontWithName:@"proximanovaregular" size:20.0]];
+    /*
+    NSLog(@"tt0001m_: %@",
+          [UIFont fontNamesForFamilyName:@"Proxima Nova"]
+          );
+    UIFont *proximaReg = [UIFont
+            fontWithName:@"Proxima Nova"
+                          size:20];
+    [self.hourLabel setFont:proximaReg];
+    [self.minLabel setFont:[UIFont fontWithName:@"Proxima Nova Regular" size:20.0]];
+    [self.mLabel setFont:[UIFont fontWithName:@"Proxima Nova Regular" size:20.0]];
+    [self.hLabel setFont:[UIFont fontWithName:@"Proxima Nova Regular" size:20.0]];
+    */
     self.view.backgroundColor = [ChipmunkUtils chipmunkColor];
     [self scrolledToHour:0 Minute:0];
     [self.timeScrollView setupTimeScroll];
@@ -43,7 +51,7 @@
 - (void)didStopScrolling{
     
     CALayer *currentLayer = (CALayer *)[self.circleImage.layer presentationLayer];
-    self.currentAngle = [(NSNumber *)[currentLayer valueForKeyPath:@"transform.rotation"] floatValue];  
+    self.currentAngle = [(NSNumber *)[currentLayer valueForKeyPath:@"transform.rotation"] floatValue];
 
     CGAffineTransform rot = CGAffineTransformMakeRotation(self.currentAngle);
     self.circleImage.transform = rot;
@@ -66,7 +74,7 @@
         fullRotation.fillMode = kCAFillModeForwards;
         fullRotation.fromValue = [NSNumber numberWithFloat:self.currentAngle];
         fullRotation.toValue = [NSNumber numberWithFloat:((360*M_PI)/180+self.currentAngle)];
-        fullRotation.duration = 1;
+        fullRotation.duration = 1.5;
         fullRotation.repeatCount = 10000;
         [self.circleImage.layer addAnimation:fullRotation forKey:@"360"];
         
@@ -76,7 +84,7 @@
         fullRotation.fillMode = kCAFillModeForwards;
         fullRotation.fromValue = [NSNumber numberWithFloat:((360*M_PI)/180+self.currentAngle)];
         fullRotation.toValue = [NSNumber numberWithFloat:self.currentAngle];
-        fullRotation.duration = 1;
+        fullRotation.duration = 1.5;
         fullRotation.repeatCount = 10000;
         [self.circleImage.layer addAnimation:fullRotation forKey:@"360"];
         
@@ -91,14 +99,6 @@
 
 }
 
-- (IBAction)stop:(id)sender {
-    
-    [self didStopScrolling];
-}
 
-- (IBAction)go:(id)sender {
-    
-    [self didBeginScrolling:1];
-}
 @end
 

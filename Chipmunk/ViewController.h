@@ -17,9 +17,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *mLabel;
 @property (weak, nonatomic) IBOutlet UILabel *hLabel;
 
-- (IBAction)stop:(id)sender;
-- (IBAction)go:(id)sender;
-
-
 
 @end

@@ -47,7 +47,11 @@ const int MinutesInDay = 1440;
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     int scrollLocation = self.contentOffset.x;
-    TimeScrollDirection newDir = (self.lastLocation <= scrollLocation) ? TimeScrollRight : TimeScrollLeft;
+    TimeScrollDirection newDir;
+    if(self.currentDir == TimeScrollRight)
+        newDir = (self.lastLocation <= scrollLocation) ? TimeScrollRight : TimeScrollLeft;
+    else
+        newDir = (self.lastLocation < scrollLocation) ? TimeScrollRight : TimeScrollLeft;
     if(self.isStopped || newDir != self.currentDir) {
         [self.timeDelegate didBeginScrolling:newDir];
         self.isStopped = NO;
