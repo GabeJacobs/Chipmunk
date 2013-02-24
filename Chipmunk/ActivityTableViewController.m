@@ -92,7 +92,14 @@
     {
         cell.activityTypeIcon.image = [UIImage imageNamed:@"video.png"];
     }
-    cell.activityTime.text = [NSString stringWithFormat:@"%@m", data[@"minutes"]];
+    unsigned int totalMinutes = [data[@"minutes"] intValue];
+    NSString* time = nil;
+    if(totalMinutes < 60) {
+        time = [NSString stringWithFormat:@"%@m", data[@"minutes"]];
+    } else {
+        time = [NSString stringWithFormat:@"%ih %im", totalMinutes/60, totalMinutes - 60 * (totalMinutes/60)];
+    }
+    cell.activityTime.text = time;
     
     // the things that are different for each cell such as time and the icon
     // set that here?!?!?!?!?!
