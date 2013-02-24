@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ActivityTableViewController : UIViewController
+@interface ActivityTableViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+
+@property (weak, nonatomic) IBOutlet UITableView *table;
+@property (nonatomic, strong) NSArray* dataSource;
 
 @end

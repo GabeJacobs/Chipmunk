@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C2034" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Gl6-vG-AVp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Gl6-vG-AVp">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -156,6 +156,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="3lU-4X-EP9"/>
+                    <connections>
+                        <outlet property="table" destination="wst-dx-TMj" id="dfR-k5-HyQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eik-zq-nk4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -179,6 +182,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ActivityTableViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="activityName" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="table" candidateClass="UITableView"/>
             </relationships>
         </class>
         <class className="TimeScrollView" superclassName="UIScrollView">
