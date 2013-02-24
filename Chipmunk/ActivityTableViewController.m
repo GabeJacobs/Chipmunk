@@ -100,6 +100,21 @@
         time = [NSString stringWithFormat:@"%ih %im", totalMinutes/60, totalMinutes - 60 * (totalMinutes/60)];
     }
     cell.activityTime.text = time;
+    NSString *activityURL = data[@"img_url"];
+    UIImage *image;
+    cell.activityImage.image = image;
+    NSLog(@"activity url: %@", activityURL.class);
+    if(![activityURL isKindOfClass:[NSNull class]] && !([activityURL isEqualToString:@""]))
+    {
+        image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:activityURL]]];
+        
+    }
+    else{
+        image = [UIImage imageNamed:@"leopard.jpeg"];
+
+    }
+    cell.activityImage.image = image;
+
     
     // the things that are different for each cell such as time and the icon
     // set that here?!?!?!?!?!
