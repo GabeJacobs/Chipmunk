@@ -29,7 +29,7 @@
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxi-lZ-wnP">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="25" id="YJs-3z-nx1"/>
+                                    <constraint firstAttribute="width" constant="60" id="0xr-BP-c1D"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -69,15 +69,17 @@
                                     <action selector="stop:" destination="2" eventType="touchUpInside" id="4tc-Xz-fEi"/>
                                 </connections>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="twv-vx-OEf" customClass="TimeScrollView"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" translatesAutoresizingMaskIntoConstraints="NO" id="twv-vx-OEf" customClass="TimeScrollView">
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="twv-vx-OEf" firstAttribute="centerX" secondItem="Z7Z-FE-uyz" secondAttribute="centerX" type="default" id="9v1-W9-Rw6"/>
+                            <constraint firstItem="lxi-lZ-wnP" firstAttribute="centerX" secondItem="3XV-Pa-TFV" secondAttribute="centerX" type="default" id="9vl-9z-mVg"/>
                             <constraint firstAttribute="bottom" secondItem="jbn-Ma-QtD" secondAttribute="bottom" constant="124" id="AdN-oU-fOX"/>
                             <constraint firstItem="jbn-Ma-QtD" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="44" id="D8t-uO-4mY"/>
                             <constraint firstItem="X34-36-hWF" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="106" id="Dya-i7-Fod"/>
-                            <constraint firstItem="3XV-Pa-TFV" firstAttribute="centerX" secondItem="lxi-lZ-wnP" secondAttribute="centerX" type="default" id="GzE-54-86Z"/>
                             <constraint firstItem="UJI-UI-pol" firstAttribute="baseline" secondItem="lxi-lZ-wnP" secondAttribute="baseline" type="default" id="ShA-RB-fB5"/>
                             <constraint firstItem="twv-vx-OEf" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="32" id="TBW-0z-Ymw"/>
                             <constraint firstItem="UJI-UI-pol" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="153" id="V00-qd-uQJ"/>
@@ -135,6 +137,25 @@
     <resources>
         <image name="Circle2.png" width="451" height="460"/>
     </resources>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="TimeScrollView" superclassName="UIScrollView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TimeScrollView.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="go:"/>
+                <relationship kind="action" name="stop:"/>
+                <relationship kind="outlet" name="circleImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="hourLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="minLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="timeScrollView" candidateClass="TimeScrollView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

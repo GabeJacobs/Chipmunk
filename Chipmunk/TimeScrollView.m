@@ -8,7 +8,8 @@
 
 #import "TimeScrollView.h"
 
-const int MinuteMultiplyFactor = 5;
+const int MinuteMultiplyFactor = 15;
+
 const int MinutesInDay = 1440;
 
 @interface TimeScrollView ()
@@ -31,14 +32,15 @@ const int MinutesInDay = 1440;
 
 - (void)setupTimeScroll {
     // 320 is the width of the screen so that the scroll view goes from 0 to 7200
+    self.delegate = self;
     self.contentSize = CGSizeMake((MinuteMultiplyFactor * MinutesInDay) + self.frame.size.width, self.contentSize.height);
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    int scrollLoc = self.contentOffset.x;
-    int hours = scrollLoc % (MinuteMultiplyFactor * MinutesInDay);
-    int minutes = scrollLoc - (MinuteMultiplyFactor * MinutesInDay);
-    NSLog(@"Minute: %i Hour: %i", hours, minutes);
+    int totalMins = self.contentOffset.x/MinuteMultiplyFactor;
+    int hours = totalMins/60;
+    int minutes = totalMins - (hours * 60);
+    NSLog(@"Minute: %i Hour: %i", minutes, hours);
     
     [self.timeDelegate scrolledToHour:hours Minute:minutes];
 }
