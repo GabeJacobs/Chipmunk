@@ -15,6 +15,7 @@ const int MinutesInDay = 1440;
 @interface TimeScrollView ()
 
 @property (nonatomic) CGFloat lastLocation;
+@property (nonatomic) BOOL isStopped;
 @property (nonatomic) TimeScrollDirection currentDir;
 
 @end
@@ -38,12 +39,18 @@ const int MinutesInDay = 1440;
     self.delegate = self;
     self.currentDir = TimeScrollLeft;
     self.lastLocation = 0;
+    self.isStopped = YES;
     self.contentSize = CGSizeMake((MinuteMultiplyFactor * MinutesInDay) + self.frame.size.width, self.contentSize.height);
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     int scrollLocation = self.contentOffset.x;
     self.currentDir = (self.lastLocation < scrollLocation) ? TimeScrollRight : TimeScrollLeft;
+    if(self.isStopped) {
+        [self.timeDelegate didBeginScrolling:self.currentDir];
+        self.isStopped = NO;
+    }
+    self.lastLocation = scrollLocation;
     int totalMins = scrollLocation/MinuteMultiplyFactor;
     int hours = totalMins/60;
     int minutes = totalMins - (hours * 60);
@@ -53,18 +60,23 @@ const int MinutesInDay = 1440;
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    self.isStopped = YES;
     [self.timeDelegate didStopScrolling];
 }
 
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
-    
+    NSLog(@"scroll animation stopped");
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    NSLog(@"did end dragging");
 }
 
 - (void)setCurrentDir:(TimeScrollDirection)currentDir {
    
     if(currentDir != _currentDir) {
         NSLog(@"should begin scrolling: %i", currentDir);
-        [self.timeDelegate didBeginScrolling:currentDir];
+        //[self.timeDelegate didBeginScrolling:currentDir];
     }
     _currentDir = currentDir;
 }
