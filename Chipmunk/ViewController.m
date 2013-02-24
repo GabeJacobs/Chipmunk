@@ -61,7 +61,7 @@
 
 - (void)scrolledToHour:(int)hour Minute:(int)minute{
     
-    
+    self.minLable.text = [NSString stringWithFormat:@"%d",self.mins];
     
     
 }

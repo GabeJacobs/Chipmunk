@@ -80,7 +80,6 @@
                             <constraint firstItem="jbn-Ma-QtD" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="44" id="D8t-uO-4mY"/>
                             <constraint firstItem="X34-36-hWF" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="106" id="Dya-i7-Fod"/>
                             <constraint firstItem="3XV-Pa-TFV" firstAttribute="centerX" secondItem="lxi-lZ-wnP" secondAttribute="centerX" type="default" id="GzE-54-86Z"/>
-                            <constraint firstItem="3XV-Pa-TFV" firstAttribute="top" secondItem="jbn-Ma-QtD" secondAttribute="top" type="default" id="Lew-4R-p1n"/>
                             <constraint firstAttribute="bottom" secondItem="4I9-hX-WIE" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="S1b-v3-shY"/>
                             <constraint firstItem="UJI-UI-pol" firstAttribute="baseline" secondItem="lxi-lZ-wnP" secondAttribute="baseline" type="default" id="ShA-RB-fB5"/>
                             <constraint firstItem="UJI-UI-pol" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="153" id="V00-qd-uQJ"/>
@@ -148,6 +147,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
             <relationships>
                 <relationship kind="action" name="go:"/>
+                <relationship kind="action" name="stop:"/>
                 <relationship kind="outlet" name="circleImage" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="hourLable" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="minLable" candidateClass="UILabel"/>
