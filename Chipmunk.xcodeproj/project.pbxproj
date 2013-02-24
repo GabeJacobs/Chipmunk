@@ -525,10 +525,14 @@
 		23FF25AA16D72AB200900166 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Amadou Crookes";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Amadou Crookes";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Chipmunk/Chipmunk-Prefix.pch";
 				INFOPLIST_FILE = "Chipmunk/Chipmunk-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "74399B08-FCDA-481B-A6CD-2512AC24ACC1";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "74399B08-FCDA-481B-A6CD-2512AC24ACC1";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -536,10 +540,14 @@
 		23FF25AB16D72AB200900166 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Amadou Crookes";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Amadou Crookes";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Chipmunk/Chipmunk-Prefix.pch";
 				INFOPLIST_FILE = "Chipmunk/Chipmunk-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "74399B08-FCDA-481B-A6CD-2512AC24ACC1";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "74399B08-FCDA-481B-A6CD-2512AC24ACC1";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

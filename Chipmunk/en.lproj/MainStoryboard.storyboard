@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C2034" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Gl6-vG-AVp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Gl6-vG-AVp">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -121,8 +121,8 @@
                                                     <rect key="frame" x="5" y="65" width="310" height="148"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="center" image="bottombarwhite.png" id="Ki9-bp-syj">
-                                                    <rect key="frame" x="0.0" y="207" width="320" height="36"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="bottombarwhite.png" id="Ki9-bp-syj">
+                                                    <rect key="frame" x="15" y="207" width="290" height="36"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Watch this leopard video" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mDU-kE-n89">
@@ -204,6 +204,7 @@
                 <relationship kind="outlet" name="activityName" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="activityTime" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="activityTypeIcon" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="bottomBar" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="topBar" candidateClass="UIImageView"/>
             </relationships>
         </class>

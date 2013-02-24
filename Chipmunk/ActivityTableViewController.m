@@ -10,6 +10,7 @@
 #import "ChipmunkUtils.h"
 #import "ActivityCell.h"
 #import "DatabaseManager.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface ActivityTableViewController () <DatabaseManagerDelegate>
 
@@ -74,8 +75,16 @@
     if(cell == nil) {
         cell = [[ActivityCell alloc]  init];
         // if all cells have a common property set that here
-        cell.backgroundColor = [UIColor clearColor];
+        
     }
+    /*
+    cell.bottomBar.backgroundColor = [UIColor clearColor];
+    cell.bottomBar.layer.shadowColor = [[UIColor blackColor] CGColor];
+    cell.bottomBar.layer.shadowOffset = CGSizeMake(10.0f,10.0f);
+    cell.bottomBar.layer.shadowOpacity = .5f;
+    cell.bottomBar.layer.shadowRadius = 10.0f;
+     */
+    
     
     NSDictionary* data = self.dataSource[indexPath.row];
     cell.activityName.text = data[@"name"];
@@ -97,7 +106,12 @@
     if(totalMinutes < 60) {
         time = [NSString stringWithFormat:@"%@m", data[@"minutes"]];
     } else {
-        time = [NSString stringWithFormat:@"%ih %im", totalMinutes/60, totalMinutes - 60 * (totalMinutes/60)];
+        int hours = totalMinutes/60;
+        int mins = totalMinutes - 60 * (totalMinutes/60);
+        time = [NSString stringWithFormat:@"%ih", hours];
+        if(mins != 0) {
+            time = [time stringByAppendingString:[NSString stringWithFormat:@" %im", mins]];
+        }
     }
     cell.activityTime.text = time;
     NSString *activityURL = data[@"img_url"];
@@ -107,11 +121,8 @@
     if(![activityURL isKindOfClass:[NSNull class]] && !([activityURL isEqualToString:@""]))
     {
         image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:activityURL]]];
-        
-    }
-    else{
+    } else {
         image = [UIImage imageNamed:@"leopard.jpeg"];
-
     }
     cell.activityImage.image = image;
 
