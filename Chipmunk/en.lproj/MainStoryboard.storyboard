@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Gl6-vG-AVp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C2034" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Gl6-vG-AVp">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -72,7 +72,7 @@
                                 </state>
                                 <connections>
                                     <action selector="launchActiviesView:" destination="2" eventType="touchUpInside" id="zbI-oG-JR2"/>
-                                    <segue destination="of7-bm-wUf" kind="push" id="mKh-0O-phl"/>
+                                    <segue destination="of7-bm-wUf" kind="push" id="drm-YP-KDM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -103,27 +103,27 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="219" id="XFk-Dk-Y2b" customClass="ActivityCell">
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="activityCell" selectionStyle="none" indentationWidth="10" reuseIdentifier="activityCell" rowHeight="219" id="XFk-Dk-Y2b" customClass="ActivityCell">
                                         <rect key="frame" x="0.0" y="22" width="320" height="219"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="218"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="L0A-6U-YrU">
-                                                    <rect key="frame" x="0.0" y="33" width="320" height="148"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="toporangebar.png" id="RAV-Uj-iBM">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Dxh-k7-Ktw">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="37"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="leopard.jpeg" id="L0A-6U-YrU">
+                                                    <rect key="frame" x="0.0" y="43" width="320" height="148"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </label>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bottombarwhite.png" id="Ki9-bp-syj">
+                                                    <rect key="frame" x="0.0" y="182" width="320" height="36"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mDU-kE-n89">
-                                                    <rect key="frame" x="9" y="189" width="42" height="21"/>
+                                                    <rect key="frame" x="7" y="189" width="42" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -136,8 +136,8 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="epg-eT-N5E">
-                                                    <rect key="frame" x="0.0" y="0.0" width="38" height="37"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="videoicon.png" id="epg-eT-N5E">
+                                                    <rect key="frame" x="5" y="6" width="32" height="32"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
@@ -151,13 +151,17 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="of7-bm-wUf" id="xzN-Wi-ZoJ"/>
+                                    <outlet property="delegate" destination="of7-bm-wUf" id="xjC-ny-A5B"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="3lU-4X-EP9"/>
                     <connections>
-                        <outlet property="table" destination="wst-dx-TMj" id="dfR-k5-HyQ"/>
+                        <outlet property="table" destination="wst-dx-TMj" id="oek-Lr-ss7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eik-zq-nk4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -166,7 +170,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bottombarwhite.png" width="320" height="32"/>
+        <image name="leopard.jpeg" width="320" height="148"/>
         <image name="ringcitybitch.png" width="2119" height="2119"/>
+        <image name="toporangebar.png" width="320" height="38"/>
+        <image name="videoicon.png" width="64" height="64"/>
     </resources>
     <classes>
         <class className="ActivityCell" superclassName="UITableViewCell">
@@ -181,7 +189,6 @@
         <class className="ActivityTableViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ActivityTableViewController.h"/>
             <relationships>
-                <relationship kind="outlet" name="activityName" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="table" candidateClass="UITableView"/>
             </relationships>
         </class>

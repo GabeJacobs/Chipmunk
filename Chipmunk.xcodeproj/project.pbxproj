@@ -15,6 +15,10 @@
 		23286FAC16D9E934005E16FA /* proximanova-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23286FAA16D9E934005E16FA /* proximanova-regular.ttf */; };
 		23286FB316D9FC5B005E16FA /* ActivityTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23286FB216D9FC5B005E16FA /* ActivityTableViewController.m */; };
 		23286FB416D9FC5B005E16FA /* ActivityTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23286FB216D9FC5B005E16FA /* ActivityTableViewController.m */; };
+		2345962516DA08450088312D /* leopard.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2345962416DA08450088312D /* leopard.jpeg */; };
+		2345962716DA084F0088312D /* videoicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2345962616DA084F0088312D /* videoicon.png */; };
+		2345962916DA08580088312D /* bottombarwhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 2345962816DA08580088312D /* bottombarwhite.png */; };
+		2345962B16DA085D0088312D /* toporangebar.png in Resources */ = {isa = PBXBuildFile; fileRef = 2345962A16DA085D0088312D /* toporangebar.png */; };
 		23BAE0EB16DA013B00385268 /* ActivityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23BAE0EA16DA013B00385268 /* ActivityCell.m */; };
 		23FF257516D72AB200900166 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23FF257416D72AB200900166 /* UIKit.framework */; };
 		23FF257716D72AB200900166 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23FF257616D72AB200900166 /* Foundation.framework */; };
@@ -55,6 +59,10 @@
 		23286FAA16D9E934005E16FA /* proximanova-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "proximanova-regular.ttf"; sourceTree = "<group>"; };
 		23286FB116D9FC5B005E16FA /* ActivityTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityTableViewController.h; sourceTree = "<group>"; };
 		23286FB216D9FC5B005E16FA /* ActivityTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityTableViewController.m; sourceTree = "<group>"; };
+		2345962416DA08450088312D /* leopard.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = leopard.jpeg; sourceTree = "<group>"; };
+		2345962616DA084F0088312D /* videoicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = videoicon.png; sourceTree = "<group>"; };
+		2345962816DA08580088312D /* bottombarwhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottombarwhite.png; sourceTree = "<group>"; };
+		2345962A16DA085D0088312D /* toporangebar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toporangebar.png; sourceTree = "<group>"; };
 		23BAE0E916DA013B00385268 /* ActivityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityCell.h; sourceTree = "<group>"; };
 		23BAE0EA16DA013B00385268 /* ActivityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityCell.m; sourceTree = "<group>"; };
 		23FF257116D72AB200900166 /* Chipmunk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chipmunk.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,6 +181,10 @@
 				23FF257C16D72AB200900166 /* Chipmunk-Info.plist */,
 				23286F9D16D99D25005E16FA /* Circle2.png */,
 				23286FA016D9B851005E16FA /* Circle.png */,
+				2345962A16DA085D0088312D /* toporangebar.png */,
+				2345962816DA08580088312D /* bottombarwhite.png */,
+				2345962416DA08450088312D /* leopard.jpeg */,
+				2345962616DA084F0088312D /* videoicon.png */,
 				23FF257D16D72AB200900166 /* InfoPlist.strings */,
 				23FF258016D72AB200900166 /* main.m */,
 				23FF258216D72AB200900166 /* Chipmunk-Prefix.pch */,
@@ -283,6 +295,10 @@
 				8E571C0316D9CBA300F946A3 /* sliderbarswag.png in Resources */,
 				8E571C0516D9CBAA00F946A3 /* ringcitybitch.png in Resources */,
 				23286FAB16D9E934005E16FA /* proximanova-regular.ttf in Resources */,
+				2345962516DA08450088312D /* leopard.jpeg in Resources */,
+				2345962716DA084F0088312D /* videoicon.png in Resources */,
+				2345962916DA08580088312D /* bottombarwhite.png in Resources */,
+				2345962B16DA085D0088312D /* toporangebar.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
