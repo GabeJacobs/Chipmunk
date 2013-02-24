@@ -10,5 +10,13 @@
 #import "TimeScrollView.h"
 
 @interface ViewController : UIViewController <TimeScrollViewDelegate>
+@property (weak, nonatomic) IBOutlet UIImageView *circleImage;
+@property (weak, nonatomic) IBOutlet UILabel *hourLable;
+@property (weak, nonatomic) IBOutlet UILabel *minLable;
+
+- (IBAction)stop:(id)sender;
+- (IBAction)go:(id)sender;
+
+
 
 @end

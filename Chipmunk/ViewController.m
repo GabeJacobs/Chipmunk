@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface ViewController ()
 
@@ -17,6 +18,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -28,17 +30,50 @@
 
 - (void)didStopScrolling{
     
-    
+    [self.circleImage.layer removeAllAnimations];
+
     
 }
 
 - (void)didBeginScrolling:(int)direction{
     
+    if(direction == 1)
+    {
+        CABasicAnimation *fullRotation = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
+        fullRotation.fromValue = [NSNumber numberWithFloat:0];
+        fullRotation.toValue = [NSNumber numberWithFloat:((360*M_PI)/180)];
+        fullRotation.duration = 1;
+        fullRotation.repeatCount = 10000;
+        [self.circleImage.layer addAnimation:fullRotation forKey:@"360"];
+        
+    }
+    if(direction == 0){
+        CABasicAnimation *fullRotation = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
+        fullRotation.fromValue = [NSNumber numberWithFloat:((360*M_PI)/180)];
+        fullRotation.toValue = [NSNumber numberWithFloat:0];
+        fullRotation.duration = 1;
+        fullRotation.repeatCount = 10000;
+        [self.circleImage.layer addAnimation:fullRotation forKey:@"360"];
+        
+    }
+  
 }
 
 - (void)scrolledToHour:(int)hour Minute:(int)minute{
     
+    
+    
+    
 }
 
+- (IBAction)stop:(id)sender {
+    
+    [self didStopScrolling];
+}
+
+- (IBAction)go:(id)sender {
+    
+    [self didBeginScrolling:1];
+}
 @end
 
