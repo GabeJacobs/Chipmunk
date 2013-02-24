@@ -20,6 +20,29 @@
 	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleIcons</key>
+	<dict>
+		<key>CFBundlePrimaryIcon</key>
+		<dict>
+			<key>CFBundleIconFiles</key>
+			<array>
+				<string>Icon.png</string>
+			</array>
+			<key>UIPrerenderedIcon</key>
+			<true/>
+		</dict>
+		<key>UINewsstandIcon</key>
+		<dict>
+			<key>CFBundleIconFiles</key>
+			<array>
+				<string></string>
+			</array>
+			<key>UINewsstandBindingType</key>
+			<string>UINewsstandBindingTypeMagazine</string>
+			<key>UINewsstandBindingEdge</key>
+			<string>UINewsstandBindingEdgeLeft</string>
+		</dict>
+	</dict>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>LSRequiresIPhoneOS</key>
