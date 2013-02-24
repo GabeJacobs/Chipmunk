@@ -37,16 +37,11 @@
 - (void)didStopScrolling{
     
     CALayer *currentLayer = (CALayer *)[self.circleImage.layer presentationLayer];
-    self.currentAngle = [(NSNumber *)[currentLayer valueForKeyPath:@"transform.rotation"] floatValue];
-    NSLog(@"current angle: %f",self.currentAngle);
-  
+    self.currentAngle = [(NSNumber *)[currentLayer valueForKeyPath:@"transform.rotation"] floatValue];  
     
 
     CGAffineTransform rot = CGAffineTransformMakeRotation(self.currentAngle);
     self.circleImage.transform = rot;
-    self.circleImage.center = CGPointMake(165, 166);
-    
-    
     
     [self.circleImage.layer removeAllAnimations];
     
