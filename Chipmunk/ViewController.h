@@ -14,6 +14,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *hourLabel;
 @property (weak, nonatomic) IBOutlet UILabel *minLabel;
 @property (weak, nonatomic) IBOutlet TimeScrollView *timeScrollView;
+@property (weak, nonatomic) IBOutlet UILabel *mLabel;
+@property (weak, nonatomic) IBOutlet UILabel *hLabel;
 
 - (IBAction)stop:(id)sender;
 - (IBAction)go:(id)sender;

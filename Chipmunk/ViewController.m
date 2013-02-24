@@ -23,6 +23,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.hourLabel setFont:[UIFont fontWithName:@"proximanovaregular" size:20.0]];
+    [self.minLabel setFont:[UIFont fontWithName:@"proximanovaregular" size:20.0]];
+    [self.mLabel setFont:[UIFont fontWithName:@"proximanovaregular" size:20.0]];
+    [self.hLabel setFont:[UIFont fontWithName:@"proximanovaregular" size:20.0]];
     self.view.backgroundColor = [ChipmunkUtils chipmunkColor];
     [self scrolledToHour:0 Minute:0];
     [self.timeScrollView setupTimeScroll];
