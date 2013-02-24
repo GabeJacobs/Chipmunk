@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ChipmunkUtils.h"
 #import <QuartzCore/QuartzCore.h>
 
 #define RADIANS_TO_DEGREES(__ANGLE__) ((__ANGLE__) / (float)M_PI * 180.0f)
@@ -22,6 +23,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.view.backgroundColor = [ChipmunkUtils chipmunkColor];
     [self scrolledToHour:0 Minute:0];
     [self.timeScrollView setupTimeScroll];
     self.timeScrollView.timeDelegate = self;

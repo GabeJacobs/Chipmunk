@@ -41,6 +41,7 @@ const int MinutesInDay = 1440;
     self.currentDir = TimeScrollLeft;
     self.lastLocation = 0;
     self.isStopped = YES;
+    self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"sliderbarswag.png"]];
     self.contentSize = CGSizeMake((MinuteMultiplyFactor * MinutesInDay) + self.frame.size.width, self.contentSize.height);
 }
 
