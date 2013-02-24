@@ -83,22 +83,6 @@
     <resources>
         <image name="Circle.png" width="300" height="300"/>
     </resources>
-    <classes>
-        <class className="TimeScrollView" superclassName="UIScrollView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TimeScrollView.h"/>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="go:"/>
-                <relationship kind="action" name="stop:"/>
-                <relationship kind="outlet" name="circleImage" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="hourLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="minLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="timeScrollView" candidateClass="TimeScrollView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
