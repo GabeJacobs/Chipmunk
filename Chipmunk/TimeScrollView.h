@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-enum TimeScrollDirection {
+typedef enum TimeScrollDirection {
     TimeScrollLeft = 0,
     TimeScrollRight = 1
-    };
+} TimeScrollDirection;
 
 @protocol TimeScrollViewDelegate <NSObject>
 
