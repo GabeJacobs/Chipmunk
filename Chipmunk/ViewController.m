@@ -38,7 +38,6 @@
     
     CALayer *currentLayer = (CALayer *)[self.circleImage.layer presentationLayer];
     self.currentAngle = [(NSNumber *)[currentLayer valueForKeyPath:@"transform.rotation"] floatValue];  
-    
 
     CGAffineTransform rot = CGAffineTransformMakeRotation(self.currentAngle);
     self.circleImage.transform = rot;
@@ -55,8 +54,8 @@
         
         CABasicAnimation *fullRotation = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
         fullRotation.fillMode = kCAFillModeForwards;
-        fullRotation.fromValue = [NSNumber numberWithFloat:0];
-        fullRotation.toValue = [NSNumber numberWithFloat:((360*M_PI)/180)];
+        fullRotation.fromValue = [NSNumber numberWithFloat:self.currentAngle];
+        fullRotation.toValue = [NSNumber numberWithFloat:((360*M_PI)/180+self.currentAngle)];
         fullRotation.duration = 1;
         fullRotation.repeatCount = 10000;
         [self.circleImage.layer addAnimation:fullRotation forKey:@"360"];
@@ -65,8 +64,8 @@
     if(direction == 0){
         CABasicAnimation *fullRotation = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
         fullRotation.fillMode = kCAFillModeForwards;
-        fullRotation.fromValue = [NSNumber numberWithFloat:((360*M_PI)/180)];
-        fullRotation.toValue = [NSNumber numberWithFloat:0];
+        fullRotation.fromValue = [NSNumber numberWithFloat:((360*M_PI)/180+self.currentAngle)];
+        fullRotation.toValue = [NSNumber numberWithFloat:self.currentAngle];
         fullRotation.duration = 1;
         fullRotation.repeatCount = 10000;
         [self.circleImage.layer addAnimation:fullRotation forKey:@"360"];
