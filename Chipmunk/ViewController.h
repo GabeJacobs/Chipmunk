@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "TimeScrollView.h"
+#import "DatabaseManager.h"
 
 @interface ViewController : UIViewController <TimeScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *circleImage;
