@@ -27,6 +27,9 @@
 		23FF259B16D72AB200900166 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23FF257616D72AB200900166 /* Foundation.framework */; };
 		23FF25A316D72AB200900166 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 23FF25A116D72AB200900166 /* InfoPlist.strings */; };
 		23FF25A616D72AB200900166 /* ChipmunkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FF25A516D72AB200900166 /* ChipmunkTests.m */; };
+		8E571C0116D9CA2800F946A3 /* ChipmunkUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E571C0016D9CA2800F946A3 /* ChipmunkUtils.m */; };
+		8E571C0316D9CBA300F946A3 /* sliderbarswag.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E571C0216D9CBA300F946A3 /* sliderbarswag.png */; };
+		8E571C0516D9CBAA00F946A3 /* ringcitybitch.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E571C0416D9CBAA00F946A3 /* ringcitybitch.png */; };
 		8E87EE2516D9846100C837F0 /* TimeScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E87EE2316D9846100C837F0 /* TimeScrollView.m */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +69,10 @@
 		23FF25A216D72AB200900166 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		23FF25A416D72AB200900166 /* ChipmunkTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChipmunkTests.h; sourceTree = "<group>"; };
 		23FF25A516D72AB200900166 /* ChipmunkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChipmunkTests.m; sourceTree = "<group>"; };
+		8E571BFF16D9CA2800F946A3 /* ChipmunkUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChipmunkUtils.h; sourceTree = "<group>"; };
+		8E571C0016D9CA2800F946A3 /* ChipmunkUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChipmunkUtils.m; sourceTree = "<group>"; };
+		8E571C0216D9CBA300F946A3 /* sliderbarswag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sliderbarswag.png; sourceTree = "<group>"; };
+		8E571C0416D9CBAA00F946A3 /* ringcitybitch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ringcitybitch.png; sourceTree = "<group>"; };
 		8E87EE2316D9846100C837F0 /* TimeScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeScrollView.m; sourceTree = "<group>"; };
 		8E87EE2416D9846100C837F0 /* TimeScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeScrollView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,6 +141,8 @@
 				23FF258C16D72AB200900166 /* MainStoryboard.storyboard */,
 				23FF258F16D72AB200900166 /* ViewController.h */,
 				23FF259016D72AB200900166 /* ViewController.m */,
+				8E571BFF16D9CA2800F946A3 /* ChipmunkUtils.h */,
+				8E571C0016D9CA2800F946A3 /* ChipmunkUtils.m */,
 				8E87EE2416D9846100C837F0 /* TimeScrollView.h */,
 				8E87EE2316D9846100C837F0 /* TimeScrollView.m */,
 				23FF257B16D72AB200900166 /* Supporting Files */,
@@ -144,6 +153,8 @@
 		23FF257B16D72AB200900166 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8E571C0216D9CBA300F946A3 /* sliderbarswag.png */,
+				8E571C0416D9CBAA00F946A3 /* ringcitybitch.png */,
 				23FF257C16D72AB200900166 /* Chipmunk-Info.plist */,
 				23286F9D16D99D25005E16FA /* Circle2.png */,
 				23286FA016D9B851005E16FA /* Circle.png */,
@@ -254,6 +265,8 @@
 				23FF258E16D72AB200900166 /* MainStoryboard.storyboard in Resources */,
 				23286F9E16D99D25005E16FA /* Circle2.png in Resources */,
 				23286FA116D9B851005E16FA /* Circle.png in Resources */,
+				8E571C0316D9CBA300F946A3 /* sliderbarswag.png in Resources */,
+				8E571C0516D9CBAA00F946A3 /* ringcitybitch.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +305,7 @@
 				23FF258116D72AB200900166 /* main.m in Sources */,
 				23FF258516D72AB200900166 /* AppDelegate.m in Sources */,
 				23FF259116D72AB200900166 /* ViewController.m in Sources */,
+				8E571C0116D9CA2800F946A3 /* ChipmunkUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

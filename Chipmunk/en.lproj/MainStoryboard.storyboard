@@ -12,7 +12,7 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Circle.png" id="Z7Z-FE-uyz">
+                            <imageView contentMode="scaleAspectFit" image="ringcitybitch.png" id="Z7Z-FE-uyz">
                                 <rect key="frame" x="20" y="21" width="290" height="290"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -81,7 +81,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Circle.png" width="300" height="300"/>
+        <image name="ringcitybitch.png" width="671" height="711"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
