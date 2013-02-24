@@ -79,6 +79,19 @@
     
     NSDictionary* data = self.dataSource[indexPath.row];
     cell.activityName.text = data[@"name"];
+    NSString *type = data[@"details_type"];
+    if([type isEqualToString:@"Link"])
+    {
+        cell.activityTypeIcon.image = [UIImage imageNamed:@"book.png"];
+    }
+    else if([type isEqualToString:@"Venue"])
+    {
+        cell.activityTypeIcon.image = [UIImage imageNamed:@"venue.png"];
+    }
+    else if([type isEqualToString:@"Video"])
+    {
+        cell.activityTypeIcon.image = [UIImage imageNamed:@"video.png"];
+    }
     cell.activityTime.text = [NSString stringWithFormat:@"%@m", data[@"minutes"]];
     
     // the things that are different for each cell such as time and the icon

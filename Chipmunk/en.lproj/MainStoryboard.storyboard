@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Gl6-vG-AVp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C2034" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Gl6-vG-AVp">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -139,7 +139,7 @@
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="videoicon.png" id="epg-eT-N5E">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="epg-eT-N5E">
                                                     <rect key="frame" x="29" y="30" width="32" height="32"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -194,7 +194,6 @@
         <image name="leopard.jpeg" width="278" height="148"/>
         <image name="ringcitybitch.png" width="2119" height="2119"/>
         <image name="toporangebar.png" width="278" height="38"/>
-        <image name="videoicon.png" width="64" height="64"/>
         <image name="whitelogo.png" width="300" height="91"/>
     </resources>
     <classes>
@@ -211,6 +210,7 @@
         <class className="ActivityTableViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ActivityTableViewController.h"/>
             <relationships>
+                <relationship kind="action" name="popView:"/>
                 <relationship kind="outlet" name="table" candidateClass="UITableView"/>
             </relationships>
         </class>
@@ -220,6 +220,7 @@
         <class className="ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
             <relationships>
+                <relationship kind="action" name="getActivitiesTable:"/>
                 <relationship kind="action" name="launchActiviesView:"/>
                 <relationship kind="outlet" name="circleImage" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="hourLabel" candidateClass="UILabel"/>
