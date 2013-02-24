@@ -35,6 +35,8 @@
     [super viewDidLoad];
     NSLog(@"activity table view controller did load");
     self.table.backgroundColor = [ChipmunkUtils tableColor];
+    self.view.backgroundColor = [ChipmunkUtils tableColor];
+
     self.dbManager.delegate = self;
     [self.dbManager getActivities:30 currentLocation:nil];
     
