@@ -12,7 +12,7 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Circle.png" translatesAutoresizingMaskIntoConstraints="NO" id="Z7Z-FE-uyz">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Circle2.png" translatesAutoresizingMaskIntoConstraints="NO" id="Z7Z-FE-uyz">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="279" id="VH0-1U-5sT"/>
                                     <constraint firstAttribute="height" constant="281" id="hlq-82-ueV"/>
@@ -97,8 +97,9 @@
                     </view>
                     <connections>
                         <outlet property="circleImage" destination="Z7Z-FE-uyz" id="TwY-po-B8j"/>
-                        <outlet property="hourLable" destination="X34-36-hWF" id="M3T-Ni-VWN"/>
-                        <outlet property="minLable" destination="lxi-lZ-wnP" id="YKz-LR-a7w"/>
+                        <outlet property="hourLabel" destination="X34-36-hWF" id="o5g-gI-pof"/>
+                        <outlet property="minLabel" destination="lxi-lZ-wnP" id="4tX-iu-Nvo"/>
+                        <outlet property="timeScrollView" destination="4I9-hX-WIE" id="sWF-oK-LsX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
@@ -134,7 +135,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Circle.png" width="400" height="399"/>
+        <image name="Circle2.png" width="451" height="460"/>
     </resources>
     <classes>
         <class className="NSLayoutConstraint" superclassName="NSObject">
@@ -149,8 +150,9 @@
                 <relationship kind="action" name="go:"/>
                 <relationship kind="action" name="stop:"/>
                 <relationship kind="outlet" name="circleImage" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="hourLable" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="minLable" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="hourLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="minLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="timeScrollView" candidateClass="TimeScrollView"/>
             </relationships>
         </class>
     </classes>

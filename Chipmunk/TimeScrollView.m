@@ -31,7 +31,7 @@ const int MinutesInDay = 1440;
 
 - (void)setupTimeScroll {
     // 320 is the width of the screen so that the scroll view goes from 0 to 7200
-    self.contentSize = CGSizeMake((MinuteMultiplyFactor * MinutesInDay) + self.frame.size.width, self.contentSize.height);
+    //self.contentSize = CGSizeMake((MinuteMultiplyFactor * MinutesInDay) + self.frame.size.width, self.contentSize.height);
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {

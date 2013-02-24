@@ -18,7 +18,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    [self scrolledToHour:4 Minute:5];
+    //[self.timeScrollView setupTimeScroll];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -61,9 +62,9 @@
 
 - (void)scrolledToHour:(int)hour Minute:(int)minute{
     
-    self.minLable.text = [NSString stringWithFormat:@"%d",self.mins];
-    
-    
+    self.hourLabel.text = [NSString stringWithFormat:@"%d",hour];
+    self.minLabel.text = [NSString stringWithFormat:@"%d",minute];
+
 }
 
 - (IBAction)stop:(id)sender {

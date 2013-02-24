@@ -11,8 +11,9 @@
 
 @interface ViewController : UIViewController <TimeScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *circleImage;
-@property (weak, nonatomic) IBOutlet UILabel *hourLable;
-@property (weak, nonatomic) IBOutlet UILabel *minLable;
+@property (weak, nonatomic) IBOutlet UILabel *hourLabel;
+@property (weak, nonatomic) IBOutlet UILabel *minLabel;
+@property (weak, nonatomic) IBOutlet TimeScrollView *timeScrollView;
 
 - (IBAction)stop:(id)sender;
 - (IBAction)go:(id)sender;
