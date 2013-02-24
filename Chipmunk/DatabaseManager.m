@@ -19,7 +19,7 @@
 // start a connection and return the data to the delegate
 - (void)getActivities:(unsigned int)time currentLocation:(CLLocation*)geo
 {
-    FSNConnection* connection = [FSNConnection withUrl:[NSURL URLWithString:@"http://chipmunk.io/api/items/query"] method:FSNRequestMethodGET headers:[NSDictionary dictionary] parameters:[NSDictionary dictionaryWithObjectsAndKeys:@"10",@"time",@"-79.32,103.81",@"geo", nil]
+    FSNConnection* connection = [FSNConnection withUrl:[NSURL URLWithString:@"http://chipmunk.io/api/items/query"] method:FSNRequestMethodGET headers:[NSDictionary dictionary] parameters:[NSDictionary dictionaryWithObjectsAndKeys:@(time),@"minutes",@"-79.32,103.81",@"geo", nil]
                                             parseBlock:^id(FSNConnection *c, NSError *__autoreleasing *error) {
         return [c.responseData dictionaryFromJSONWithError:error];
     } completionBlock:^(FSNConnection *c) {
