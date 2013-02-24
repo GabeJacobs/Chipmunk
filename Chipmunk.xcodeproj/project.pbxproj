@@ -10,6 +10,7 @@
 		23286F9616D98FC1005E16FA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23286F9516D98FC1005E16FA /* QuartzCore.framework */; };
 		23286F9A16D9961B005E16FA /* Circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 23286F9916D9961B005E16FA /* Circle.png */; };
 		23286F9E16D99D25005E16FA /* Circle2.png in Resources */ = {isa = PBXBuildFile; fileRef = 23286F9D16D99D25005E16FA /* Circle2.png */; };
+		23286F9F16D9A483005E16FA /* TimeScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E87EE2316D9846100C837F0 /* TimeScrollView.m */; };
 		23FF257516D72AB200900166 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23FF257416D72AB200900166 /* UIKit.framework */; };
 		23FF257716D72AB200900166 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23FF257616D72AB200900166 /* Foundation.framework */; };
 		23FF257916D72AB200900166 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23FF257816D72AB200900166 /* CoreGraphics.framework */; };
@@ -287,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23286F9F16D9A483005E16FA /* TimeScrollView.m in Sources */,
 				23FF258116D72AB200900166 /* main.m in Sources */,
 				23FF258516D72AB200900166 /* AppDelegate.m in Sources */,
 				23FF259116D72AB200900166 /* ViewController.m in Sources */,

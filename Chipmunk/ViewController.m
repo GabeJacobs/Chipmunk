@@ -19,7 +19,7 @@
 {
     [super viewDidLoad];
     [self scrolledToHour:4 Minute:5];
-    //[self.timeScrollView setupTimeScroll];
+    [self.timeScrollView setupTimeScroll];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
