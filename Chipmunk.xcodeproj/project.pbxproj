@@ -15,6 +15,7 @@
 		23286FAC16D9E934005E16FA /* proximanova-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23286FAA16D9E934005E16FA /* proximanova-regular.ttf */; };
 		23286FB316D9FC5B005E16FA /* ActivityTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23286FB216D9FC5B005E16FA /* ActivityTableViewController.m */; };
 		23286FB416D9FC5B005E16FA /* ActivityTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23286FB216D9FC5B005E16FA /* ActivityTableViewController.m */; };
+		23BAE0EB16DA013B00385268 /* ActivityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23BAE0EA16DA013B00385268 /* ActivityCell.m */; };
 		23FF257516D72AB200900166 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23FF257416D72AB200900166 /* UIKit.framework */; };
 		23FF257716D72AB200900166 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23FF257616D72AB200900166 /* Foundation.framework */; };
 		23FF257916D72AB200900166 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23FF257816D72AB200900166 /* CoreGraphics.framework */; };
@@ -54,6 +55,8 @@
 		23286FAA16D9E934005E16FA /* proximanova-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "proximanova-regular.ttf"; sourceTree = "<group>"; };
 		23286FB116D9FC5B005E16FA /* ActivityTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityTableViewController.h; sourceTree = "<group>"; };
 		23286FB216D9FC5B005E16FA /* ActivityTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityTableViewController.m; sourceTree = "<group>"; };
+		23BAE0E916DA013B00385268 /* ActivityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityCell.h; sourceTree = "<group>"; };
+		23BAE0EA16DA013B00385268 /* ActivityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityCell.m; sourceTree = "<group>"; };
 		23FF257116D72AB200900166 /* Chipmunk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chipmunk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23FF257416D72AB200900166 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		23FF257616D72AB200900166 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -154,6 +157,8 @@
 				8E87EE2316D9846100C837F0 /* TimeScrollView.m */,
 				23286FB116D9FC5B005E16FA /* ActivityTableViewController.h */,
 				23286FB216D9FC5B005E16FA /* ActivityTableViewController.m */,
+				23BAE0E916DA013B00385268 /* ActivityCell.h */,
+				23BAE0EA16DA013B00385268 /* ActivityCell.m */,
 				23FF257B16D72AB200900166 /* Supporting Files */,
 			);
 			path = Chipmunk;
@@ -319,6 +324,7 @@
 				23FF259116D72AB200900166 /* ViewController.m in Sources */,
 				8E571C0116D9CA2800F946A3 /* ChipmunkUtils.m in Sources */,
 				23286FB316D9FC5B005E16FA /* ActivityTableViewController.m in Sources */,
+				23BAE0EB16DA013B00385268 /* ActivityCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
