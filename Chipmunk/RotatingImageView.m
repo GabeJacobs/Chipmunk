@@ -15,7 +15,7 @@
 
 
 
-const int MINUTES_IN_FULL_ROTATION = 30;
+const int MINUTES_IN_FULL_ROTATION = 45;
 
 
 @interface RotatingImageView ()

@@ -136,10 +136,10 @@
         //not sure how to do this (above) after fade animation. Fade overides this as it is now
         
         CGRect mLabelFrame = self.minLabel.frame;
-        mLabelFrame.origin.x = mLabelFrame.origin.x-25; // new x coordinate
+        mLabelFrame.origin.x = mLabelFrame.origin.x-32; // new x coordinate
         mLabelFrame.origin.y = mLabelFrame.origin.y; // new y coordinate
         CGRect mSymbolFrame = self.minuteSymbol.frame;
-        mSymbolFrame.origin.x = mSymbolFrame.origin.x-25; // new x coordinate
+        mSymbolFrame.origin.x = mSymbolFrame.origin.x-32; // new x coordinate
         mSymbolFrame.origin.y = mSymbolFrame.origin.y; // new y coordinate
         
         [UIView beginAnimations:nil context:nil];
@@ -181,10 +181,10 @@
         hSymbolFrame.origin.x = hSymbolFrame.origin.x-35; // new x coordinate
         hSymbolFrame.origin.y = hSymbolFrame.origin.y; // new y coordinate
         CGRect mLabelFrame = self.minLabel.frame;
-        mLabelFrame.origin.x = mLabelFrame.origin.x+25; // new x coordinate
+        mLabelFrame.origin.x = mLabelFrame.origin.x+32; // new x coordinate
         mLabelFrame.origin.y = mLabelFrame.origin.y; // new y coordinate
         CGRect mSymbolFrame = self.minuteSymbol.frame;
-        mSymbolFrame.origin.x = mSymbolFrame.origin.x+25; // new x coordinate
+        mSymbolFrame.origin.x = mSymbolFrame.origin.x+32; // new x coordinate
         mSymbolFrame.origin.y = mSymbolFrame.origin.y; // new y coordinate
         
         [UIView beginAnimations:nil context:nil];
