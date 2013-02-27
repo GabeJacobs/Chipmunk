@@ -15,7 +15,7 @@
 
 
 
-const int MINUTES_IN_FULL_ROTATION = 16;
+const int MINUTES_IN_FULL_ROTATION = 30;
 
 
 @interface RotatingImageView ()
@@ -51,9 +51,9 @@ const int MINUTES_IN_FULL_ROTATION = 16;
 
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    
     UITouch* touch = [touches anyObject];
     CGPoint  touchCoor = [touch locationInView:self];
-    
 
     
     float dx = touchCoor.x - self.center.x;
@@ -64,6 +64,9 @@ const int MINUTES_IN_FULL_ROTATION = 16;
 
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    //self.transform = CGAffineTransformMakeScale(1.05, 1.05);
+    
     UITouch* touch = [touches anyObject];
     
     CGPoint pt = [touch locationInView:self];
@@ -72,7 +75,7 @@ const int MINUTES_IN_FULL_ROTATION = 16;
     float currentAngle = [[currentLayer valueForKeyPath:@"transform.rotation"] floatValue];
     
     if([self calculateDistanceFromCenter:pt] < 50) {
-        NSLog(@"TOO CLOSE HOMIE");
+        NSLog(@"TOO CLOSE HOMIE. GET OUTA DERRRR");
         return;
     }
  
@@ -85,7 +88,7 @@ const int MINUTES_IN_FULL_ROTATION = 16;
     float newAngle = currentAngle - angleDifference;
     
     if(currentAngle == 0 && self.fullRotations == 0 && newAngle < 0) {
-        NSLog(@"you dumb piece of shit!\nYou do not have negative time you idiot");
+        NSLog(@"you dumb piece of shit!\nYou do not have negative time you idiot. LOLZ");
         return;
     }
     
@@ -97,6 +100,7 @@ const int MINUTES_IN_FULL_ROTATION = 16;
     }
     
     self.transform = CGAffineTransformMakeRotation(newAngle);
+
 }
 
 //*********************************************************
@@ -129,7 +133,7 @@ const int MINUTES_IN_FULL_ROTATION = 16;
         totalMins = self.fullRotations * MINUTES_IN_FULL_ROTATION;
         totalMins += (degrees/360) * MINUTES_IN_FULL_ROTATION;
     }
-    NSLog(@"MINS: %i",totalMins);
+    //NSLog(@"MINS: %i",totalMins);
     [self.delegate rotatedToHour:totalMins/60 Minute:totalMins - ((totalMins/60)*60)];
     
     

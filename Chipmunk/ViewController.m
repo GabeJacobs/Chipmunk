@@ -24,6 +24,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.hourLabel.hidden = true;
+    self.hourSymbol.hidden = true;
+    self.hourIsShowing = 0;
     /*
     NSLog(@"tt0001m_: %@",
           [UIFont fontNamesForFamilyName:@"Proxima Nova"]
@@ -64,6 +67,8 @@
 }
 
 - (void)didBeginScrolling:(int)direction{
+    
+    
     CALayer *currentLayer = (CALayer *)[self.circleImage.layer presentationLayer];
     self.currentAngle = [(NSNumber *)[currentLayer valueForKeyPath:@"transform.rotation"] floatValue];
     
@@ -104,6 +109,7 @@
 {
     self.hourLabel.text = [NSString stringWithFormat:@"%d",hour];
     self.minLabel.text = [NSString stringWithFormat:@"%d",minute];
+    [self moveHourLabel:hour Minute:minute];
 }
 
 
@@ -112,6 +118,89 @@
     int hours = [self.hourLabel.text intValue];
     int minutes = [self.minLabel.text intValue];
     return (hours * 60) + minutes;
+}
+
+- (void)moveHourLabel:(int)hour Minute:(int)minute;
+{
+    if(hour == 0 && self.hourIsShowing == 1)
+    {
+      
+        CGRect hLabelFrame = self.hourLabel.frame;
+        hLabelFrame.origin.x = hLabelFrame.origin.x+35; // new x coordinate
+        hLabelFrame.origin.y = hLabelFrame.origin.y; // new y coordinate
+        CGRect hSymbolFrame = self.hourSymbol.frame;
+        hSymbolFrame.origin.x = hSymbolFrame.origin.x+35; // new x coordinate
+        hSymbolFrame.origin.y = hSymbolFrame.origin.y; // new y coordinate
+    
+        
+        //not sure how to do this (above) after fade animation. Fade overides this as it is now
+        
+        CGRect mLabelFrame = self.minLabel.frame;
+        mLabelFrame.origin.x = mLabelFrame.origin.x-25; // new x coordinate
+        mLabelFrame.origin.y = mLabelFrame.origin.y; // new y coordinate
+        CGRect mSymbolFrame = self.minuteSymbol.frame;
+        mSymbolFrame.origin.x = mSymbolFrame.origin.x-25; // new x coordinate
+        mSymbolFrame.origin.y = mSymbolFrame.origin.y; // new y coordinate
+        
+        [UIView beginAnimations:nil context:nil];
+        [UIView setAnimationDuration: .4];
+        self.hourLabel.frame = hLabelFrame;
+        self.hourSymbol.frame = hSymbolFrame;
+        self.minLabel.frame = mLabelFrame;
+        self.minuteSymbol.frame = mSymbolFrame;
+        
+        [UIView commitAnimations];
+        
+
+        CATransition *labelAnimation = [CATransition animation];
+        labelAnimation.type = kCATransitionFade;
+        labelAnimation.duration = .25;
+        CATransition *symbolAnimation = [CATransition animation];
+        symbolAnimation.type = kCATransitionFade;
+        symbolAnimation.duration = .7;
+        [self.hourLabel.layer addAnimation:labelAnimation forKey:nil];
+        [self.hourSymbol.layer addAnimation:symbolAnimation forKey:nil];
+
+        self.hourLabel.hidden = true;
+        self.hourSymbol.hidden = true;
+        
+        
+        self.hourIsShowing = 0;
+
+
+    }
+    if(hour > 0 && self.hourIsShowing == 0)
+    {
+        self.hourLabel.hidden = false;
+        self.hourSymbol.hidden = false;
+        
+        CGRect hLabelFrame = self.hourLabel.frame;
+        hLabelFrame.origin.x = hLabelFrame.origin.x-35; // new x coordinate
+        hLabelFrame.origin.y = hLabelFrame.origin.y; // new y coordinate
+        CGRect hSymbolFrame = self.hourSymbol.frame;
+        hSymbolFrame.origin.x = hSymbolFrame.origin.x-35; // new x coordinate
+        hSymbolFrame.origin.y = hSymbolFrame.origin.y; // new y coordinate
+        CGRect mLabelFrame = self.minLabel.frame;
+        mLabelFrame.origin.x = mLabelFrame.origin.x+25; // new x coordinate
+        mLabelFrame.origin.y = mLabelFrame.origin.y; // new y coordinate
+        CGRect mSymbolFrame = self.minuteSymbol.frame;
+        mSymbolFrame.origin.x = mSymbolFrame.origin.x+25; // new x coordinate
+        mSymbolFrame.origin.y = mSymbolFrame.origin.y; // new y coordinate
+        
+        [UIView beginAnimations:nil context:nil];
+        [UIView setAnimationDuration: .4];
+        self.hourLabel.frame = hLabelFrame;
+        self.hourSymbol.frame = hSymbolFrame;
+        self.minLabel.frame = mLabelFrame;
+        self.minuteSymbol.frame = mSymbolFrame;
+
+        [UIView commitAnimations];
+        
+        
+        
+        self.hourIsShowing = 1;
+
+    }
 }
 
 - (IBAction)getActivitiesTable:(id)sender

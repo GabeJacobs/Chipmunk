@@ -17,8 +17,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *minLabel;
 @property (weak, nonatomic) IBOutlet TimeScrollView *timeScrollView;
 @property (weak, nonatomic) IBOutlet RotatingImageView *rotatingTimeSelect;
+@property (weak, nonatomic) IBOutlet UILabel *hourSymbol;
+@property (weak, nonatomic) IBOutlet UILabel *minuteSymbol;
+@property (nonatomic) int hourIsShowing;
 
-- (IBAction)launchActiviesView:(id)sender;
+//- (IBAction)launchActiviesView:(id)sender;
 
 
 @end
