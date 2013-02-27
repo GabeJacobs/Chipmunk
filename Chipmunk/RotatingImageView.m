@@ -14,7 +14,6 @@
 #define radiansToDegrees(radians) (radians * 180 / M_PI)
 
 
-
 const int MINUTES_IN_FULL_ROTATION = 45;
 
 
@@ -73,6 +72,7 @@ const int MINUTES_IN_FULL_ROTATION = 45;
     
     CALayer *currentLayer = [self.layer presentationLayer];
     float currentAngle = [[currentLayer valueForKeyPath:@"transform.rotation"] floatValue];
+    NSLog(@"Current angle: %f", currentAngle);
     
     if([self calculateDistanceFromCenter:pt] < 50) {
         NSLog(@"TOO CLOSE HOMIE. GET OUTA DERRRR");
@@ -84,10 +84,10 @@ const int MINUTES_IN_FULL_ROTATION = 45;
     float ang = atan2(dy,dx);
     float angleDifference = self.deltaAngle - ang;
     
-    //NSLog(@"CUrrent Angle: %f", radiansToDegrees(currentAngle));
+
     float newAngle = currentAngle - angleDifference;
-    
-    if(currentAngle >= 0 && currentAngle <= 0.5 && self.fullRotations == 0 && newAngle < 0) {
+    if(newAngle < 0 && [self totalMinutes] == 0) {
+        [self timeBasedOnRotations];
         NSLog(@"you dumb piece of shit!\nYou do not have negative time you idiot. LOLZ");
         return;
     }
@@ -117,10 +117,13 @@ const int MINUTES_IN_FULL_ROTATION = 45;
 }
 
 - (void)timeBasedOnRotations {
+    unsigned int totalMins = [self totalMinutes];
+    [self.delegate rotatedToHour:totalMins/60 Minute:totalMins - ((totalMins/60)*60)];
+}
+
+- (unsigned int)totalMinutes {
     CALayer *currentLayer = [self.layer presentationLayer];
     float currentAngle = [[currentLayer valueForKeyPath:@"transform.rotation"] floatValue];
-    // values in the second and third quadrant are represented by negative values so flip
-    // it and add it to 180 degrees
     float degrees = radiansToDegrees(currentAngle);
     if(degrees < 0) {
         //NSLog(@"Degrees: %f Converted: %f", degrees, 360 + degrees);
@@ -133,10 +136,7 @@ const int MINUTES_IN_FULL_ROTATION = 45;
         totalMins = self.fullRotations * MINUTES_IN_FULL_ROTATION;
         totalMins += (degrees/360) * MINUTES_IN_FULL_ROTATION;
     }
-    //NSLog(@"MINS: %i",totalMins);
-    [self.delegate rotatedToHour:totalMins/60 Minute:totalMins - ((totalMins/60)*60)];
-    
-    
+    return totalMins;
 }
 
 
