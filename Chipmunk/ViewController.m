@@ -40,6 +40,7 @@
     [self scrolledToHour:0 Minute:0];
     [self.timeScrollView setupTimeScroll];
     self.timeScrollView.timeDelegate = self;
+    self.rotatingTimeSelect.delegate = self;
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -97,8 +98,14 @@
 {    
     self.hourLabel.text = [NSString stringWithFormat:@"%d",hour];
     self.minLabel.text = [NSString stringWithFormat:@"%d",minute];
-    
 }
+
+- (void)rotatedToHour:(int)hour Minute:(int)minute
+{
+    self.hourLabel.text = [NSString stringWithFormat:@"%d",hour];
+    self.minLabel.text = [NSString stringWithFormat:@"%d",minute];
+}
+
 
 - (unsigned int)getTotalMinutes
 {
@@ -109,9 +116,15 @@
 
 - (IBAction)getActivitiesTable:(id)sender
 {
-    ActivityTableViewController* atvc = [self.storyboard instantiateViewControllerWithIdentifier:@"activityTable"];
-    atvc.minutes = [self getTotalMinutes];
-    [self.navigationController pushViewController:atvc animated:YES];
+    unsigned int minutes = [self getTotalMinutes];
+    if(minutes > 0) {
+        ActivityTableViewController* atvc = [self.storyboard instantiateViewControllerWithIdentifier:@"activityTable"];
+        atvc.minutes = minutes;
+        [self.navigationController pushViewController:atvc animated:YES];
+    } else {
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"No Time?" message:@"Please add time by spinning the circle" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    }
 }
 
 

@@ -51,32 +51,21 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView contentMode="scaleAspectFit" image="ringcitybitch.png" id="Z7Z-FE-uyz">
-                                <rect key="frame" x="20" y="108" width="278" height="286"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="twv-vx-OEf" customClass="TimeScrollView">
+                            <scrollView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="twv-vx-OEf" customClass="TimeScrollView">
                                 <rect key="frame" x="0.0" y="440" width="320" height="74"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Ce4-xs-8vT">
-                                <rect key="frame" x="20" y="119" width="278" height="286"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="getActivitiesTable:" destination="2" eventType="touchUpInside" id="Vtz-He-Kpb"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="whitelogo.png" id="HTA-Jl-hrG">
                                 <rect key="frame" x="37" y="1" width="246" height="89"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView contentMode="scaleAspectFit" image="ringcitybitch.png" id="Z7Z-FE-uyz" customClass="RotatingImageView">
+                                <rect key="frame" x="20" y="108" width="278" height="286"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="LWl-Hd-kug" appends="YES" id="SBM-wP-Gbg"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -86,10 +75,16 @@
                         <outlet property="circleImage" destination="Z7Z-FE-uyz" id="TwY-po-B8j"/>
                         <outlet property="hourLabel" destination="X34-36-hWF" id="o5g-gI-pof"/>
                         <outlet property="minLabel" destination="lxi-lZ-wnP" id="4tX-iu-Nvo"/>
+                        <outlet property="rotatingTimeSelect" destination="Z7Z-FE-uyz" id="RXY-Um-ogl"/>
                         <outlet property="timeScrollView" destination="twv-vx-OEf" id="RZF-1x-RRU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="LWl-Hd-kug">
+                    <connections>
+                        <action selector="getActivitiesTable:" destination="2" id="hbe-J3-vKF"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-180" y="147"/>
         </scene>
@@ -211,9 +206,11 @@
         <class className="ActivityTableViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ActivityTableViewController.h"/>
             <relationships>
-                <relationship kind="action" name="popView:"/>
                 <relationship kind="outlet" name="table" candidateClass="UITableView"/>
             </relationships>
+        </class>
+        <class className="RotatingImageView" superclassName="UIImageView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RotatingImageView.h"/>
         </class>
         <class className="TimeScrollView" superclassName="UIScrollView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TimeScrollView.h"/>
@@ -226,6 +223,7 @@
                 <relationship kind="outlet" name="circleImage" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="hourLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="minLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="rotatingTimeSelect" candidateClass="RotatingImageView"/>
                 <relationship kind="outlet" name="timeScrollView" candidateClass="TimeScrollView"/>
             </relationships>
         </class>

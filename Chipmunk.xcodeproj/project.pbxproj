@@ -53,6 +53,7 @@
 		8E7BDE8416DA15F600B67749 /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7BDE8316DA15F600B67749 /* DatabaseManager.m */; };
 		8E7BDE8516DA160300B67749 /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7BDE8316DA15F600B67749 /* DatabaseManager.m */; };
 		8E87EE2516D9846100C837F0 /* TimeScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E87EE2316D9846100C837F0 /* TimeScrollView.m */; };
+		8EF3579A16DD2F470069ADB0 /* RotatingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF3579916DD2F470069ADB0 /* RotatingImageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +123,8 @@
 		8E7BDE8316DA15F600B67749 /* DatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseManager.m; sourceTree = "<group>"; };
 		8E87EE2316D9846100C837F0 /* TimeScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeScrollView.m; sourceTree = "<group>"; };
 		8E87EE2416D9846100C837F0 /* TimeScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeScrollView.h; sourceTree = "<group>"; };
+		8EF3579816DD2F470069ADB0 /* RotatingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotatingImageView.h; sourceTree = "<group>"; };
+		8EF3579916DD2F470069ADB0 /* RotatingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotatingImageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +198,8 @@
 				8E571C0016D9CA2800F946A3 /* ChipmunkUtils.m */,
 				8E87EE2416D9846100C837F0 /* TimeScrollView.h */,
 				8E87EE2316D9846100C837F0 /* TimeScrollView.m */,
+				8EF3579816DD2F470069ADB0 /* RotatingImageView.h */,
+				8EF3579916DD2F470069ADB0 /* RotatingImageView.m */,
 				23286FB116D9FC5B005E16FA /* ActivityTableViewController.h */,
 				23286FB216D9FC5B005E16FA /* ActivityTableViewController.m */,
 				23BAE0E916DA013B00385268 /* ActivityCell.h */,
@@ -414,6 +419,7 @@
 				8E7BDE7E16DA15D000B67749 /* FSN_categories.m in Sources */,
 				8E7BDE7F16DA15D000B67749 /* FSNConnection.m in Sources */,
 				8E7BDE8016DA15D000B67749 /* FSNData.m in Sources */,
+				8EF3579A16DD2F470069ADB0 /* RotatingImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,7 +484,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Amadou Crookes";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Amadou Crookes";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -493,6 +500,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "74399B08-FCDA-481B-A6CD-2512AC24ACC1";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "74399B08-FCDA-481B-A6CD-2512AC24ACC1";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -509,7 +518,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Amadou Crookes";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Amadou Crookes";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -517,6 +527,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "74399B08-FCDA-481B-A6CD-2512AC24ACC1";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "74399B08-FCDA-481B-A6CD-2512AC24ACC1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
