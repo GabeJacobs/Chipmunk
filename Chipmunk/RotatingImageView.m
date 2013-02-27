@@ -87,7 +87,7 @@ const int MINUTES_IN_FULL_ROTATION = 45;
     //NSLog(@"CUrrent Angle: %f", radiansToDegrees(currentAngle));
     float newAngle = currentAngle - angleDifference;
     
-    if(currentAngle == 0 && self.fullRotations == 0 && newAngle < 0) {
+    if(currentAngle >= 0 && currentAngle <= 0.5 && self.fullRotations == 0 && newAngle < 0) {
         NSLog(@"you dumb piece of shit!\nYou do not have negative time you idiot. LOLZ");
         return;
     }
