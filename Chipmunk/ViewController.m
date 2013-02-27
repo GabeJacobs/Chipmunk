@@ -21,12 +21,33 @@
 
 @implementation ViewController
 
+@synthesize tickURLRef;
+@synthesize tickObject;
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.hourLabel.hidden = true;
     self.hourSymbol.hidden = true;
     self.hourIsShowing = 0;
+    
+    
+    // for setting up ticking sound
+	CFBundleRef mainBundle = CFBundleGetMainBundle ();
+    tickURLRef  =	CFBundleCopyResourceURL (
+												 mainBundle,
+												 CFSTR ("tick"),
+												 CFSTR ("wav"),
+												 NULL
+												 );
+	
+	AudioServicesCreateSystemSoundID (
+									  tickURLRef,
+									  &tickObject
+									  );
+
+    
     /*
     NSLog(@"tt0001m_: %@",
           [UIFont fontNamesForFamilyName:@"Proxima Nova"]
@@ -68,7 +89,6 @@
 
 - (void)didBeginScrolling:(int)direction{
     
-    
     CALayer *currentLayer = (CALayer *)[self.circleImage.layer presentationLayer];
     self.currentAngle = [(NSNumber *)[currentLayer valueForKeyPath:@"transform.rotation"] floatValue];
     
@@ -107,9 +127,15 @@
 
 - (void)rotatedToHour:(int)hour Minute:(int)minute
 {
-    self.hourLabel.text = [NSString stringWithFormat:@"%d",hour];
-    self.minLabel.text = [NSString stringWithFormat:@"%d",minute];
-    [self moveHourLabel:hour Minute:minute];
+    
+    if(![self.minLabel.text isEqualToString:[NSString stringWithFormat:@"%d",minute]])
+    {
+           
+        self.hourLabel.text = [NSString stringWithFormat:@"%d",hour];
+        self.minLabel.text = [NSString stringWithFormat:@"%d",minute];
+        [self moveHourLabel:hour Minute:minute];
+        //AudioServicesPlaySystemSound (tickObject); // plays sound
+    }
 }
 
 
@@ -216,6 +242,11 @@
     }
 }
 
+
+//-(void)setTickURLRef:(CFURLRef)tickURLRef
+//{
+  //  _tickURLRef = tickURLRef;
+//}
 
 
 

@@ -27,6 +27,8 @@
 		2345964616DA26550088312D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2345964516DA26550088312D /* Default@2x.png */; };
 		2345964816DA2A4C0088312D /* book.png in Resources */ = {isa = PBXBuildFile; fileRef = 2345964716DA2A4B0088312D /* book.png */; };
 		2345964A16DA2A550088312D /* venue.png in Resources */ = {isa = PBXBuildFile; fileRef = 2345964916DA2A550088312D /* venue.png */; };
+		235E41D716DDC59F0051B3BB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 235E41D616DDC59F0051B3BB /* AudioToolbox.framework */; };
+		235E41DB16DDC7CE0051B3BB /* tick.wav in Resources */ = {isa = PBXBuildFile; fileRef = 235E41DA16DDC7CE0051B3BB /* tick.wav */; };
 		23BAE0EB16DA013B00385268 /* ActivityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23BAE0EA16DA013B00385268 /* ActivityCell.m */; };
 		23FF257516D72AB200900166 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23FF257416D72AB200900166 /* UIKit.framework */; };
 		23FF257716D72AB200900166 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23FF257616D72AB200900166 /* Foundation.framework */; };
@@ -85,6 +87,8 @@
 		2345964516DA26550088312D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		2345964716DA2A4B0088312D /* book.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = book.png; sourceTree = "<group>"; };
 		2345964916DA2A550088312D /* venue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = venue.png; sourceTree = "<group>"; };
+		235E41D616DDC59F0051B3BB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		235E41DA16DDC7CE0051B3BB /* tick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tick.wav; sourceTree = "<group>"; };
 		23BAE0E916DA013B00385268 /* ActivityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityCell.h; sourceTree = "<group>"; };
 		23BAE0EA16DA013B00385268 /* ActivityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityCell.m; sourceTree = "<group>"; };
 		23FF257116D72AB200900166 /* Chipmunk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chipmunk.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				235E41D716DDC59F0051B3BB /* AudioToolbox.framework in Frameworks */,
 				23286F9616D98FC1005E16FA /* QuartzCore.framework in Frameworks */,
 				23FF257516D72AB200900166 /* UIKit.framework in Frameworks */,
 				23FF257716D72AB200900166 /* Foundation.framework in Frameworks */,
@@ -176,6 +181,7 @@
 		23FF257316D72AB200900166 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				235E41D616DDC59F0051B3BB /* AudioToolbox.framework */,
 				23286F9516D98FC1005E16FA /* QuartzCore.framework */,
 				23FF257416D72AB200900166 /* UIKit.framework */,
 				23FF257616D72AB200900166 /* Foundation.framework */,
@@ -214,6 +220,7 @@
 		23FF257B16D72AB200900166 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				235E41DA16DDC7CE0051B3BB /* tick.wav */,
 				2345963B16DA1FB00088312D /* whitelogo.png */,
 				8E571C0216D9CBA300F946A3 /* sliderbarswag.png */,
 				2345964916DA2A550088312D /* venue.png */,
@@ -373,6 +380,7 @@
 				2345964616DA26550088312D /* Default@2x.png in Resources */,
 				2345964816DA2A4C0088312D /* book.png in Resources */,
 				2345964A16DA2A550088312D /* venue.png in Resources */,
+				235E41DB16DDC7CE0051B3BB /* tick.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
